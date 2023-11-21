@@ -3,7 +3,7 @@ import { setupServer } from "msw/node";
 import { http, HttpResponse } from "msw";
 
 import App from "./App";
-import { afterAll } from "vitest";
+import { afterAll, beforeAll } from "vitest";
 
 const server = setupServer(
   http.get("https://jsonplaceholder.typicode.com/todos", () => {
